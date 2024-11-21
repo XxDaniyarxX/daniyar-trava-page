@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 1345px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    padding: 25px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+.header-right button {
+    padding: 8px 17px;
+    background-color: rgb(70, 163, 88);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.menu li {
+    color: rgb(61, 61, 61);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-bottom: 10px;
+    transition: 3s ease-in-out;
+}
+
+.menu li:hover {
+    cursor: pointer;
+    font-weight: 700;
+    border-bottom: 3px solid rgb(70, 163, 88);
+}
+
+/* banner */
+
+.banner {
+    display: flex;
+    padding: 116px 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(134.56deg, rgba(245, 245, 245, 0.5) -23.457%, rgba(245, 245, 245, 0.5) 107.508%);
+}
+
+.banner span {
+    color: rgb(61, 61, 61);
+    font-family: Cera Pro;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 10%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.banner h1 {
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 70px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline;
+}
+
+.planet {
+    color: rgb(70, 163, 88);
+}
+
+.banner p {
+    color: rgb(114, 114, 114);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.banner button {
+    padding: 10px 27px;
+    color: #FFF;
+    border-radius: 6px;
+    background-color: rgb(70, 163, 88);
+    border: none;
+}
+
+.banner .box {
+    margin-right: 50px;
+}
+
+.banner img {
+    width: 518px;
+    height: 518px;
+}
+
+.plants {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* sidebar */
+
+.sidebar {
+    background: linear-gradient(134.56deg, rgba(245, 245, 245, 0.5) -23.457%, rgba(245, 245, 245, 0.5) 107.508%);
+    width: 30%;
+}
+
+.sidebar h3 {
+    color: rgb(61, 61, 61);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+/* category */
+
+.category {
+    padding: 10px 20px;
+}
+
+.category ul li {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+    list-style: none;
+}
+
+.category ul li:hover {
+    color: rgb(70, 163, 88);
+}
+
+/* filter */
+.filter {
+    padding: 10px 20px;
+}
+
+#range {
+    background-color: rgb(70, 163, 88);
+    margin: 20px 0px;
+}
+
+.filter .div {
+    color: rgb(61, 61, 61);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+    display: block;
+    margin: 20px 0px;
+}
+
+.filter button {
+    padding: 8px 26px;
+    color: #FFF;
+    border-radius: 6px;
+    background-color: rgb(70, 163, 88);
+    margin-top: 20px;
+    border: none;
+}
+
+.slider span {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgb(70, 163, 88);
+}
+
+/* size */
+
+.size {
+    padding: 10% 20px;
+}
+
+.size-content span {
+    color: rgb(61, 61, 61);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+/* products */
+
+.our-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 260px;
+    background: linear-gradient(134.56deg, rgba(245, 245, 245, 0.5) -23.457%, rgba(245, 245, 245, 0.5) 107.508%);
+    padding: 20px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.product img {
+    width: 220px;
+    height: 250px;
+}
+
+.product h5 {
+    color: rgb(61, 61, 61);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.product span {
+    color: rgb(70, 163, 88);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.discount {
+    padding: 5px;
+    color: #FFF;
+    background-color: rgb(70, 163, 88);
+    position: absolute;
+    left: 0px;
+    top: 30px;
+}
