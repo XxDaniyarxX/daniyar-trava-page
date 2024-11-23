@@ -1,14 +1,9 @@
 let urlParams = new URLSearchParams(window.location.search)
-
 let category_slug = urlParams.get("category")
-
-
-let content = document.querySelector('.our-products')
+const content = document.querySelector('.our-products')
 let API = 'https://dummyjson.com/products'
-
-let CATEGORY_API = "https://dummyjson.com/products/categories"
-
-const list = document.querySelector(".list")    
+const CATEGORY_API = "https://dummyjson.com/products/categories"
+const list = document.querySelector(".list")
 
 if(category_slug){
     API  = `https://dummyjson.com/products/category/${category_slug}`
@@ -70,3 +65,34 @@ function setCategory(slug) {
 function getpro(id) {
     window.location.href = `product.html?id=${id}`
 }
+
+document.querySelector('.login').addEventListener('click', () => {
+    const Signup = document.querySelector('.signup')
+    if (Signup.style.display === 'none') {
+        Signup.style.display = 'block'
+        banner.style.backgroundColor = 'rgb(229, 229, 229)';
+        plants.style.backgroundColor = 'rgb(229, 229, 229)';
+        Signup.style.backgroundColor = 'white';
+        Signup.style.zIndex = '1';
+    }
+})
+const plants = document.querySelector('.plants')
+const banner = document.querySelector('.banner')
+const xSvg = document.querySelector('.x-svg')
+const signUp = document.querySelector('.signup')
+const input1 = document.querySelector('.input-1')
+    xSvg.addEventListener('click', () => {
+        if (xSvg === true) {
+           signUp.style.display = 'block'
+        } else {
+            signUp.style.display = 'none'
+            if (input1.value === '') {
+                alert('Веди пожалуйста любой текст в input XD в первый мне сейчас лень делать над 2 инпутом логику')
+                signUp.style.display = 'block'
+
+            }
+            banner.style.backgroundColor = 'white';
+            plants.style.backgroundColor = 'white';
+            input1.value = ''
+        }
+    })

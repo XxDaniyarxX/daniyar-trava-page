@@ -76,7 +76,7 @@ function showMeProducts(data) {
           <h4 style="color: rgb(165, 165, 165); padding-bottom: 5px">SKU: <span style="color: rgb(114, 114, 114)">${data.sku}</span></h4>
           <h4 style="color: rgb(165, 165, 165); padding-bottom: 5px">Categories: <span style="color: rgb(114, 114, 114)">${data.title}</span></h4>
           <h4 style="color: rgb(165, 165, 165); padding-bottom: 10px">Tags: <span style="color: rgb(114, 114, 114)">${data.tags}</span></h4>
-          <h4 style="font-weight: 700; color: rgba(61, 61, 61, 1); ">Share this products: <span style="padding-left: 5px"><img src="./assets/fb.svg"> </span> <span style="padding-left: 9px;"><img src="./assets/twit.svg"> </span> <span style="padding-left: 9px"><img src="./assets/linkedin.svg"> </span> <span style="padding-left: 9px"><img src="./assets/mail.svg"> </span></h4>
+          <h4 style="font-weight: 700; color: rgba(61, 61, 61, 1); ">Share thes products: <span style="padding-left: 5px"><img src="./assets/fb.svg"> </span> <span style="padding-left: 9px;"><img src="./assets/twit.svg"> </span> <span style="padding-left: 9px"><img src="./assets/linkedin.svg"> </span> <span style="padding-left: 9px"><img src="./assets/mail.svg"> </span></h4>
     </div>
     `
 }
