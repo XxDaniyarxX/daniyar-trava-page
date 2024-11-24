@@ -66,10 +66,13 @@ function getpro(id) {
     window.location.href = `product.html?id=${id}`
 }
 
+
+
 document.querySelector('.login').addEventListener('click', () => {
     const Signup = document.querySelector('.signup')
     if (Signup.style.display === 'none') {
         Signup.style.display = 'block'
+        Signup.style.position = 'fixed'
         banner.style.backgroundColor = 'rgb(229, 229, 229)';
         plants.style.backgroundColor = 'rgb(229, 229, 229)';
         Signup.style.backgroundColor = 'white';
@@ -81,18 +84,35 @@ const banner = document.querySelector('.banner')
 const xSvg = document.querySelector('.x-svg')
 const signUp = document.querySelector('.signup')
 const input1 = document.querySelector('.input-1')
+const input2 = document.querySelector('.input-2')
+const loginGreen = document.querySelector('.login-green')
     xSvg.addEventListener('click', () => {
         if (xSvg === true) {
            signUp.style.display = 'block'
         } else {
             signUp.style.display = 'none'
             if (input1.value === '') {
-                alert('Веди пожалуйста любой текст в input XD в первый мне сейчас лень делать над 2 инпутом логику')
+                alert('Веди пожалуйста почту  -_-')
+                signUp.style.display = 'block'
+
+            } else if (input2.value === '') {
+                alert('а пароль -_-')
+                signUp.style.display = 'block'
+            } else if (loginGreen) {
+                alert('Нажми на кнопку логин XD')
                 signUp.style.display = 'block'
 
             }
+            loginGreen.addEventListener('click', () => {
+                signUp.style.display = 'none'
+                input1.value = ''
+                input2.value = ''
+            })
+            input1.value = ''
+            input2.value = ''
             banner.style.backgroundColor = 'white';
             plants.style.backgroundColor = 'white';
-            input1.value = ''
+
+
         }
     })
