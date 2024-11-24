@@ -5,8 +5,8 @@ let API = 'https://dummyjson.com/products'
 const CATEGORY_API = "https://dummyjson.com/products/categories"
 const list = document.querySelector(".list")
 
-if(category_slug){
-    API  = `https://dummyjson.com/products/category/${category_slug}`
+if (category_slug) {
+    API = `https://dummyjson.com/products/category/${category_slug}`
 }
 
 async function getProducts() {
@@ -19,14 +19,14 @@ async function getProducts() {
 
     } catch (error) {
         console.log(error);
-        
+
     }
 }
 
 getProducts()
 
-function showProduct(data){
-    content.innerHTML = data.map((item)=>{
+function showProduct(data) {
+    content.innerHTML = data.map((item) => {
         return `
         <div onclick="getpro(${item.id})" class='product'>
             <div class="discount">${item.discountPercentage}% OFF</div>
@@ -38,15 +38,15 @@ function showProduct(data){
     }).join("")
 }
 
-async function  getCategory () {
+async function getCategory() {
     try {
-        const res = await fetch (CATEGORY_API)
+        const res = await fetch(CATEGORY_API)
 
         const data = await res.json()
 
-        console.log (data);
+        console.log(data);
 
-        list.innerHTML = data.map( (item) =>{
+        list.innerHTML = data.map((item) => {
             return `
             <li onclick="setCategory('${item.slug}')"> ${item.name}</li>
             `
@@ -54,18 +54,19 @@ async function  getCategory () {
         }).join("")
 
     } catch (error) {
-        console.log (error);
+        console.log(error);
     }
 }
+
 getCategory()
 
 function setCategory(slug) {
     window.location.href = `index.html?category=${slug}`
 }
+
 function getpro(id) {
     window.location.href = `product.html?id=${id}`
 }
-
 
 
 document.querySelector('.login').addEventListener('click', () => {
@@ -86,33 +87,34 @@ const signUp = document.querySelector('.signup')
 const input1 = document.querySelector('.input-1')
 const input2 = document.querySelector('.input-2')
 const loginGreen = document.querySelector('.login-green')
-    xSvg.addEventListener('click', () => {
-        if (xSvg === true) {
-           signUp.style.display = 'block'
-        } else {
-            signUp.style.display = 'none'
-            if (input1.value === '') {
-                alert('Веди пожалуйста почту  -_-')
-                signUp.style.display = 'block'
+xSvg.addEventListener('click', () => {
+    if (xSvg === true) {
+        signUp.style.display = 'block'
+    } else {
+        signUp.style.display = 'none'
+        if (input1.value === '') {
+            alert('Веди пожалуйста почту  -_-')
+            signUp.style.display = 'block'
 
-            } else if (input2.value === '') {
-                alert('а пароль -_-')
-                signUp.style.display = 'block'
-            } else if (loginGreen) {
-                alert('Нажми на кнопку логин XD')
-                signUp.style.display = 'block'
-
-            }
-            loginGreen.addEventListener('click', () => {
-                signUp.style.display = 'none'
-                input1.value = ''
-                input2.value = ''
-            })
-            input1.value = ''
-            input2.value = ''
-            banner.style.backgroundColor = 'white';
-            plants.style.backgroundColor = 'white';
-
+        } else if (input2.value === '') {
+            alert('а пароль -_-')
+            signUp.style.display = 'block'
+        } else if (loginGreen) {
+            alert('Нажми на кнопку логин XD')
+            signUp.style.display = 'block'
 
         }
-    })
+        loginGreen.addEventListener('click', () => {
+            signUp.style.display = 'none'
+            input1.value = ''
+            input2.value = ''
+            alert('Удачи ;)')
+        })
+        input1.value = ''
+        input2.value = ''
+        banner.style.backgroundColor = 'white';
+        plants.style.backgroundColor = 'white';
+
+
+    }
+})
